@@ -4,14 +4,7 @@ from email.mime.multipart import MIMEMultipart
 import socket
 import subprocess
 import os
-
-# 設定部分
-SMTP_SERVER = os.environ.get('SMTP_SERVER')
-SMTP_PORT = os.environ.get('SMTP_PORT')
-GMAIL_USER = os.environ.get('GMAIL_USER')  # 送信元メールアドレス
-GMAIL_PASSWORD = os.environ.get('GMAIL_PASSWORD')  # Gmailアプリパスワード
-TO_EMAIL = os.environ.get('TO_EMAIL')  # 送信先メールアドレス
-IP_FILE = os.environ.get('IP_FILE')  # IPアドレスを保存するファイル
+from config import SMTP_SERVER, SMTP_PORT, GMAIL_USER, GMAIL_PASSWORD, TO_EMAIL, IP_FILE
 
 def get_current_ip(interface="wlan0"):
     """指定されたインターフェースのIPv4アドレスを取得する"""

@@ -11,6 +11,7 @@ cd myip
 ```
 
 venv仮想環境作成
+
 ※この辺は導入環境に合わせてください。
 ```
 python3 -m venv venv
@@ -22,11 +23,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-設定ファイルの手動作成
+設定ファイル(config.py)の手動作成
+
 ※この記載はGmail用です。必要に応じて修正を。
+
 ※Gmailを使用する場合、パスワードはGoogleアプリパスワードにしないと認証エラーが出ました。
+
 　下記URLから登録し、表示される16桁のパスワードを登録してください。
+ 
 　https://myaccount.google.com/apppasswords
+
+config.py
 ```
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
